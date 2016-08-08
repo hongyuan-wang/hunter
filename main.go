@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "hunter/classpath"
 
 func main() {
 
@@ -19,5 +20,14 @@ func main() {
 }
 
 func startJvm(cmd *Cmd) {
+	cp := classpath.Parse(cmd.classpath)
+
+	data, err := cp.ReadClass(cmd.class)
+	if err != nil {
+		fmt.Printf("read class %s error, %s ", cmd.class, err)
+	} else {
+
+		fmt.Printf("classs data %s\n", data)
+	}
 	fmt.Printf("start jvm hunter to run %s with %s ...\n", cmd.class, cmd.classpath)
 }

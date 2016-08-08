@@ -6,3 +6,16 @@ type Classpath struct {
 	extClasspath  Entry
 	userClasspath Entry
 }
+
+func Parse(userCpOption string) *Classpath {
+	var cp = &Classpath{}
+
+	// TODO:
+	return cp
+}
+
+func (self *Classpath) ReadClass(className string) ([]byte, error) {
+
+	// TODO:
+	return nil, nil
+}
