@@ -19,5 +19,5 @@ func main() {
 }
 
 func startJvm(cmd *Cmd) {
-	fmt.Printf("start jvm hunter to run %s ...\n", cmd.class)
+	fmt.Printf("start jvm hunter to run %s with %s ...\n", cmd.class, cmd.classpath)
 }
