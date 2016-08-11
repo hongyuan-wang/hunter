@@ -1,6 +1,12 @@
 package classpath
 
 type Entry interface {
-	String() string
-	readClass(className string) ([]byte, Entry, error)
+	toString() string
+	readClass(className string) ([]byte, error)
+}
+
+func newEntry(path string) Entry {
+
+	// TODO:
+	return nil
 }
